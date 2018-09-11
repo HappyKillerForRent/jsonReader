@@ -1,4 +1,4 @@
-package pl.task.jsonAlert.readJson;
+package pl.task.jsonAlert.jsonReadPackage;
 
 import java.io.BufferedReader;
 import java.io.IOException;

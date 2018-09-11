@@ -30,3 +30,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'pl.task.jsonAlert.jsonReadPackage.ReadJson'
+    }
+    baseName = 'codingAssigment'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
